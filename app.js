@@ -94,10 +94,20 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){}
+function multiplyArray(testArray){
+  var product = 1;
+  for (var i = 0; i < testArray.length; i++) {
+    product *= testArray[i];
+  }
+
+  var productMsg = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2]
+                 + ' have a product of ' + product + '.';
+
+  return [product, productMsg];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Submit the link to the repo via Canvas.
 
