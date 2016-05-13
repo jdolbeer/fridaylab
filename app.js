@@ -66,20 +66,17 @@ testArray = [2,3,4];
 
 function sumArray(testArray){
   var sum = 0;
+
   for(var i = 0; i < testArray.length; i++) {
     sum += testArray[i];
   }
-  var sumMessage = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
-  return [sum,sumMessage];
+
+  var s = testArray.toString();
+  console.log(s);
+
+  var sumMessage = testArray.toString() + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
+  return [sum, sumMessage];
 }
-//   for(var i = 0; i < testArray.length; i++) {
-//     sumMessage = sumMessage + testArray[i] + ',';
-//   }
-//   console.log(sumMessage);
-//   sumMessage = sumMessage.substring(1,testArray.length - 1);
-//   console.log(sumMessage);
-//   return [sum, sumMessage];
-// }
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -100,7 +97,7 @@ function multiplyArray(testArray){
     product *= testArray[i];
   }
 
-  var productMsg = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2]
+  var productMsg = 'The numbers ' + testArray.toString()
                  + ' have a product of ' + product + '.';
 
   return [product, productMsg];
