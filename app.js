@@ -24,8 +24,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b){
-  multiplyResult = a * b;
-  multiplyMessage = 'The product of ' + a + ' and ' + b + ' is ' + multiplyResult + '.';
+  var multiplyResult = a * b;
+  var multiplyMessage = 'The product of ' + a + ' and ' + b + ' is ' + multiplyResult + '.';
 
   return [multiplyResult, multiplyMessage];
 }
@@ -43,10 +43,15 @@ Write a function called sumAndMultiply() that takes in three numbers as argument
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(){}
-
+function sumAndMultiply(a,b,c){
+  var sumTotal = (a + b + c);
+  var sumTotalMsg = a + ' and ' + b + ' and ' + c + ' sum to ' + sumTotal + '.';
+  var productTotal = (a * b * c);
+  var productTotalMsg = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productTotal + '.';
+  return [sumTotal, sumTotalMsg, productTotalMsg];
+}
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. don't forget to create a new branch for your work on the next question!
 
