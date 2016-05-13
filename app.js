@@ -64,11 +64,26 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 testArray = [2,3,4];
 
-function sumArray(testArray){}
+function sumArray(testArray){
+  var sum = 0;
+  for(var i = 0; i < testArray.length; i++) {
+    sum += testArray[i];
+  }
+  var sumMessage = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
+  return [sum,sumMessage];
+}
+//   for(var i = 0; i < testArray.length; i++) {
+//     sumMessage = sumMessage + testArray[i] + ',';
+//   }
+//   console.log(sumMessage);
+//   sumMessage = sumMessage.substring(1,testArray.length - 1);
+//   console.log(sumMessage);
+//   return [sum, sumMessage];
+// }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(2,3,4);
+testSumArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle, synchronize the code between both GitHubs and both laptops, and swap Driver/Navigator roles. Don't forget to create a new branch for your work on the next question!
 
